@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+<script>
+	// калькулятор:
+	// var a = parseInt(prompt("чеши писло:"));
+	// var b = parseInt(prompt("чеши истчо:"));
+	// alert(a+b);
+
+	// игра в загадочки:
+	// var a = "без окон без дверей, полна жопа огурцов:";
+	// var a_right = "огурец";
+	// var b = "между ног болтается, на три буквы называется:";
+	// var b_right = "ява";
+	// var i = 0;
+	// var y='ok';
+	// var n='oh noes!';
+	// var a_answer = prompt(a);
+	// if (a_answer == a_right) {
+	// 	alert(y);
+	// 	i++;
+	// } else {alert(n);}
+	// var b_answer = prompt(b);
+	// if (b_answer==b_right) {alert(y);i++;} else{alert(n);}
+	// alert('Правильных ответов: '+i);
+
+	// angry birds (проверить, попадает ли введенное число в один из двух числовых диапазонов):
+	// var piu = parseInt(prompt('введи число:'));
+	// if ( ((piu >= 100) && (piu <= 200)) || ((piu >= 500) && (piu <= 600)) ) {
+	// 	alert('попал!');
+	// } else if (isNaN(piu)) {
+	// 	alert('а ну-ка блеать!');
+	// } else {alert('промазал...');}
+
+	// пока 'n' меньше или равно 9, выводить алерт. Таким образом получается всплывающее окошеджго с циферками от 1 до 10 :)	
+	// var n = 0;
+	// while(n <=9) {
+	// 	n++;
+	// 	alert(n);
+	// }
+
+	// пока не введешь "1", будем бухать:
+	// do {
+	// 	alert("твоё здоровье!");
+	// } while (prompt('если тебе уже хватит – введи 1:') != '1');
+
+	// alert('иди проспись!');
+
+	// Русская автономная рулетка:
+	// var n = 0;
+	// do {
+	// 	if ((Math.random() * 6) < 1) {
+	// 		alert('ты убит');
+	// 		break;
+	// 	}
+
+	// 	n++;
+	// } while (true)
+	// alert( 'раундов сыграно: ' + n );
+
+	// Русская интерактивная рулетка:
+	// var n = 0;
+	// userdata = prompt('готов? если нет – введи «no»: ');
+	// if (userdata != 'no') {
+	// 	do {
+	// 		if ((Math.random() * 6) < 1) {
+	// 			alert('ты убит');
+	// 			n++;
+	// 			break;
+	// 		}
+	// 		alert('повезло');
+	// 		n++;
+	// 		userdata;
+	// 	} while (userdata != 'no');	
+	// }
+	
+	// alert( 'раундов сыграно: ' + n );
+
+	// Банковский калькулятор процентов:
+	var user_money = parseInt(prompt('Сумма вклада, ₽:'));
+		user_percent = parseInt(prompt('Процентная ставка, % за год:'));
+		user_term = parseInt(prompt('Срок вклада, лет:'));
+
+	for (var i = 1; i <= user_term; i++) {
+		percent = user_money * (user_percent / 100); // только проценты
+		geschaeft = user_money + percent; // сумма с процентами
+		alert('Прошло лет: ' +i +'. Остаток на счете: ' +geschaeft);
+		user_money = geschaeft; // наварились!
+	};
+
+</script>
